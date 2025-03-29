@@ -20,7 +20,7 @@ public class TenantFilter implements Filter {
         try {
             filterChain.doFilter(servletRequest, servletResponse);
         } finally {
-            TenantContext.setCurrentTenant("");
+            TenantContext.clear();
         }
     }
 }
